@@ -16,10 +16,13 @@ public class ArticleTest {
 
     @Test
     public void getters() {
-        Article article = new Article("id", "title", "content");
+        Article article = new Article.ArticleBuilder().build();
         assertEquals("id", article.getId());
         assertEquals("title", article.getTitle());
         assertEquals("content", article.getContent());
+        assertEquals("description", article.getDescription());
+        assertEquals("author", article.getAuthor());
+        assertEquals(0, article.getViews());
     }
 
 }

@@ -7,7 +7,7 @@ public class ArticleParser extends Parser<Article> {
 
     private static Pattern titlePattern = Pattern.compile("<p class=\"index-mainpic-bigtitl\">(.*?)</p>");
     private static Pattern idPattern = Pattern.compile("<link rel='canonical' href='(.*?)' />");
-
+    private static Pattern authorPattern = Pattern.compile("<meta name=\'author\' content=\'(.*?)\'>");
 
     @Override
     protected Article onParse(String s) {
@@ -28,9 +28,26 @@ public class ArticleParser extends Parser<Article> {
             id = "";
         }
 
+        final String author;
+        Matcher authorMatcher = authorPattern.matcher(s);
+        if(authorMatcher.find()){
+            author = authorMatcher.group(1);
+        }else{
+            author = "";
+        }
+
+
         String content = "";
 
-        return new Article(id, title, content);
+        String description = "";
+
+
+
+        int views = 0;
+
+
+        return new Article.ArticleBuilder().setId(id).setTitle(title).setAuthor(author).setContent(content)
+                .setDescription(description).setViews(views).build();
     }
 
 }
