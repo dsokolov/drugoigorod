@@ -13,7 +13,6 @@ import ru.drugoigorod.app.data.ArticleParser;
 import ru.drugoigorod.app.web.ArticleRequest;
 import ru.drugoigorod.app.web.Request;
 
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
@@ -37,7 +36,8 @@ public class ArticleFullTest {
             assertTrue(s.contains("http://drugoigorod.ru/bloodwork-16/"));
             Article article = parser.parse(s);
             assertNotNull(article);
-            assertEquals("bloodwork-16", article.getId());
+            assertFalse(TextUtils.isEmpty(article.getId()));
+            assertTrue(article.getId().contains("bloodwork-16"));
         } catch (Request.RequestException e) {
             assertFalse(e.getMessage(), true);
         }

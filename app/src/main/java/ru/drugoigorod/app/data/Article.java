@@ -8,6 +8,8 @@ public class Article {
     private final int views;
     private final String description;
     private final String author;
+    private String categoryTitle;
+    private String headerBackgroundColor;
 
     public Article(ArticleBuilder articleBuilder) {
         this.id = articleBuilder.id;
@@ -34,12 +36,28 @@ public class Article {
         return author;
     }
 
-    public int getViews() {
+    public int getViewsCount() {
         return views;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getPublishDateTime() {
+        return null;
+    }
+
+    public String getCategoryTitle() {
+        return categoryTitle;
+    }
+
+    public String getHeaderImageUrl() {
+        return null;
+    }
+
+    public String getHeaderBackgroundColor() {
+        return headerBackgroundColor;
     }
 
     public static class ArticleBuilder {
@@ -50,6 +68,7 @@ public class Article {
         private int views;
         private String description;
         private String author;
+        private String headerBackgroundColor;
 
         public ArticleBuilder setId(String id) {
             this.id = id;
@@ -83,6 +102,23 @@ public class Article {
 
         public Article build(){
             return new Article(this);
+        }
+
+        public ArticleBuilder setPublichDateTime(String s) {
+            return this;
+        }
+
+        public ArticleBuilder setCategoryTitle(String category) {
+            return this;
+        }
+
+        public ArticleBuilder setHeaderImageUrl(String s) {
+            return this;
+        }
+
+        public ArticleBuilder setHeaderBackgroundColor(String headerBackgroundColor) {
+            this.headerBackgroundColor = headerBackgroundColor;
+            return this;
         }
 
     }
