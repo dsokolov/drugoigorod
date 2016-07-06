@@ -5,7 +5,7 @@ public class Article {
     private final String id;
     private final String title;
     private final String content;
-    private final int views;
+    private final String views;
     private final String description;
     private final String author;
     private String categoryTitle;
@@ -36,7 +36,7 @@ public class Article {
         return author;
     }
 
-    public int getViewsCount() {
+    public String getViewsCount() {
         return views;
     }
 
@@ -65,7 +65,7 @@ public class Article {
         private String id;
         private String title;
         private String content;
-        private int views;
+        private String views;
         private String description;
         private String author;
         private String headerBackgroundColor;
@@ -95,7 +95,7 @@ public class Article {
             return this;
         }
 
-        public ArticleBuilder setViews(int views) {
+        public ArticleBuilder setViews(String views) {
             this.views = views;
             return this;
         }

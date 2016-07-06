@@ -5,6 +5,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.filters.SmallTest;
 import android.support.test.runner.AndroidJUnit4;
 import android.text.TextUtils;
+import android.util.Log;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -80,6 +81,7 @@ public class ArticleParserTest {
             assertNotNull(article);
             assertEquals("http://drugoigorod.ru/bloodwork-16/", article.getId());
             assertEquals("БИЗНЕС НА КРОВИ", article.getTitle());
+            Log.v("title", "parseBloodwork: "+ article.getTitle());
             assertEquals("Проверяем работу частных самарских лабораторий по приёму анализов", article.getDescription());
             assertEquals("Антон Черепок", article.getAuthor());
             assertEquals(1126, article.getViewsCount());

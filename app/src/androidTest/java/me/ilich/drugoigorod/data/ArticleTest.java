@@ -21,7 +21,7 @@ public class ArticleTest {
                 .setTitle("title")
                 .setDescription("description")
                 .setAuthor("author")
-                .setViews(123)
+                .setViews("123")
                 .setPublichDateTime("publish date time")
                 .setCategoryTitle("category")
                 .setHeaderImageUrl("header url")
