@@ -16,6 +16,7 @@ import ru.drugoigorod.app.web.Request;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -38,6 +39,7 @@ public class ArticleFullTest {
             assertNotNull(article);
             assertFalse(TextUtils.isEmpty(article.getId()));
             assertTrue(article.getId().contains("bloodwork-16"));
+            assertEquals("БИЗНЕС НА КРОВИ", article.getTitle());
         } catch (Request.RequestException e) {
             assertFalse(e.getMessage(), true);
         }
