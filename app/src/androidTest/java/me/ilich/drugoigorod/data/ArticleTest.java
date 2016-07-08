@@ -32,7 +32,7 @@ public class ArticleTest {
         assertEquals("title", article.getTitle());
         assertEquals("description", article.getDescription());
         assertEquals("author", article.getAuthor());
-        assertEquals(123, article.getViewsCount());
+        assertEquals("123", article.getViewsCount());
         assertEquals("publish date time", article.getPublishDateTime());
         assertEquals("category", article.getCategoryTitle());
         assertEquals("header url", article.getHeaderImageUrl());

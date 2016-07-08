@@ -8,7 +8,7 @@ public class ArticleParser extends Parser<Article> {
     private static Pattern idPattern = Pattern.compile("<link rel='canonical' href='(.*?)' />");
     private static Pattern descriptionPattern = Pattern.compile("<p class=\"index-mainpic-bigtitl\">(.*?)</p>");
     private static Pattern authorPattern = Pattern.compile("<meta name=\'author\' content=\'(.*?)\'>");
-    private static Pattern titlePattern = Pattern.compile("<p class=\'index-mainpic-bigsub\'>'(.*?)''</p>'");
+    private static Pattern titlePattern = Pattern.compile("<p class=\"index-mainpic-bigsub\">(.*?)</p>");
     private static Pattern viewsPattern = Pattern.compile("/images/eye_views.png>'(.*?)''</nobr></p>'");
 
     @Override
