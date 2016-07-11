@@ -9,7 +9,9 @@ public class ArticleParser extends Parser<Article> {
     private static Pattern descriptionPattern = Pattern.compile("<p class=\"index-mainpic-bigtitl\">(.*?)</p>");
     private static Pattern authorPattern = Pattern.compile("<meta name=\'author\' content=\'(.*?)\'>");
     private static Pattern titlePattern = Pattern.compile("<p class=\"index-mainpic-bigsub\">(.*?)</p>");
-    private static Pattern viewsPattern = Pattern.compile("/images/eye_views.png>'(.*?)''</nobr></p>'");
+    //private static Pattern viewsPattern = Pattern.compile("/images/eye_views.png>'(.*?)''</nobr></p>'");
+    //private static Pattern viewsPattern = Pattern.compile("/images/eye_views.png>'(.*?)''</nobr></p>'");
+    private static Pattern viewsPattern = Pattern.compile("<img border=0 src=\"\\/images\\/eye_views.png\" style=\"margin-left:8px;margin-bottom:4px;margin-right:1px;\">(.*?)<!--old ");
 
     @Override
     protected Article onParse(String s) {
@@ -52,7 +54,7 @@ public class ArticleParser extends Parser<Article> {
 
         final String views;
         Matcher viewsMatcher = viewsPattern.matcher(s);
-        if (authorMatcher.find()) {
+        if (viewsMatcher.find()) {
             views = viewsMatcher.group(1);
         } else {
             views = "";
