@@ -64,7 +64,7 @@ public class ArticleParserTest {
             assertEquals("Грушинские фестивали 1990-х годов в 27 фотографиях", article.getDescription());
             assertEquals("1 039", article.getViewsCount());
             assertEquals("Андрей Артёмов", article.getAuthor());
-            assertEquals("30 ИЮНЯ 2016, 12:37", article.getPublishDateTime());
+            assertEquals("2016-06-30T12:37:31+00:00", article.getPublishDateTime());
             assertEquals("ИСТОРИИ", article.getCategoryTitle());
             assertEquals("http://drugoigorod.ru/wp-content/uploads/2016/06/дг-9571.jpg", article.getHeaderImageUrl());
             assertEquals("121, 63, 152, 0.5", article.getHeaderBackgroundColor());
@@ -86,7 +86,7 @@ public class ArticleParserTest {
             assertEquals("Проверяем работу частных самарских лабораторий по приёму анализов", article.getDescription());
             assertEquals("1 127", article.getViewsCount());
             assertEquals("Антон Черепок", article.getAuthor());
-            assertEquals("29 ИЮНЯ 2016, 14:39", article.getPublishDateTime());
+            assertEquals("2016-06-29T14:39:30+00:00", article.getPublishDateTime());
             assertEquals("", article.getCategoryTitle());
             assertEquals("http://drugoigorod.ru/wp-content/uploads/2016/06/krov_1.jpg", article.getHeaderImageUrl());
             assertEquals("204, 61, 61, 0.5", article.getHeaderBackgroundColor());

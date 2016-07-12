@@ -10,7 +10,7 @@ public class ArticleParser extends Parser<Article> {
     private static Pattern authorPattern = Pattern.compile("<meta name=\"author\" content=\"(.*?)\">");
     private static Pattern titlePattern = Pattern.compile("<p class=\"index-mainpic-bigsub\">(.*?)</p>");
     private static Pattern viewsPattern = Pattern.compile("<img border=0 src=\"\\/images\\/eye_views.png\" style=\"margin-left:8px;margin-bottom:4px;margin-right:1px;\">(.*?)<!--old ");
-    private static Pattern dateTimePattern = Pattern.compile("class=\"entry-date updated\" datetime=\" \\d{4}-\\d{2}-\\d{2}[Т]\\d{2}:\\d{2}:\\d{2}+\\d{2}:\\d{2} >(.*?)</time>");
+    private static Pattern dateTimePattern = Pattern.compile("<time  itemprop=\"dateCreated\" class=\"entry-date updated\" datetime=\"(.*?)\" >");
 
 
 
