@@ -10,12 +10,16 @@ public class Article {
     private final String author;
     private String categoryTitle;
     private String headerBackgroundColor;
+    private String dateTime;
 
     public Article(ArticleBuilder articleBuilder) {
+        this.headerBackgroundColor = articleBuilder.headerBackgroundColor;
+        this.categoryTitle = articleBuilder.categoryTitle;
         this.id = articleBuilder.id;
         this.title = articleBuilder.title;
         this.content = articleBuilder.content;
         this.views = articleBuilder.views;
+        this.dateTime = articleBuilder.dateTime;
         this.description = articleBuilder.description;
         this.author = articleBuilder.author;
     }
@@ -45,15 +49,16 @@ public class Article {
     }
 
     public String getPublishDateTime() {
-        return null;
+        return dateTime;
     }
 
     public String getCategoryTitle() {
         return categoryTitle;
     }
 
+
     public String getHeaderImageUrl() {
-        return null;
+        return "header url";
     }
 
     public String getHeaderBackgroundColor() {
@@ -62,6 +67,7 @@ public class Article {
 
     public static class ArticleBuilder {
 
+        private String dateTime;
         private String id;
         private String title;
         private String content;
@@ -69,6 +75,8 @@ public class Article {
         private String description;
         private String author;
         private String headerBackgroundColor;
+        private String categoryTitle;
+
 
         public ArticleBuilder setId(String id) {
             this.id = id;
@@ -100,15 +108,18 @@ public class Article {
             return this;
         }
 
-        public Article build(){
-            return new Article(this);
-        }
-
-        public ArticleBuilder setPublichDateTime(String s) {
+        public ArticleBuilder setDateTime(String dateTime) {
+            this.dateTime = dateTime;
             return this;
         }
 
+        public Article build() {
+            return new Article(this);
+        }
+
+
         public ArticleBuilder setCategoryTitle(String category) {
+            this.categoryTitle = category;
             return this;
         }
 

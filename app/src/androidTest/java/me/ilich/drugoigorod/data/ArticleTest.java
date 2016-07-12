@@ -22,7 +22,7 @@ public class ArticleTest {
                 .setDescription("description")
                 .setAuthor("author")
                 .setViews("123")
-                .setPublichDateTime("publish date time")
+                .setDateTime("publish date time")
                 .setCategoryTitle("category")
                 .setHeaderImageUrl("header url")
                 .setHeaderBackgroundColor("color")
