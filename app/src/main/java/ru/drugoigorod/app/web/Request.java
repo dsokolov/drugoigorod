@@ -25,8 +25,8 @@ public class Request {
         try {
             URL url1 = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) url1.openConnection();
-            connection.setConnectTimeout(1000);
-            connection.setReadTimeout(1000);
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(2500);
             connection.setInstanceFollowRedirects(true);
             connection.connect();
             int code = connection.getResponseCode();
