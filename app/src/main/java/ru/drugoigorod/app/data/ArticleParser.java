@@ -11,8 +11,8 @@ public class ArticleParser extends Parser<Article> {
     private static Pattern titlePattern = Pattern.compile("<p class=\"index-mainpic-bigsub\">(.*?)</p>");
     private static Pattern viewsPattern = Pattern.compile("<img border=0 src=\"\\/images\\/eye_views.png\" style=\"margin-left:8px;margin-bottom:4px;margin-right:1px;\">(.*?)<!--old ");
     private static Pattern dateTimePattern = Pattern.compile("<time  itemprop=\"dateCreated\" class=\"entry-date updated\" datetime=\"(.*?)\" >");
-
-
+    private static Pattern categoryPattern = Pattern.compile("category.*>([А-Я]*)<\\/a");
+    private static Pattern headerImagePattern = Pattern.compile("<meta property=\"og:image\" content=\"http://drugoigorod.ru/wp-content/uploads/(.*)<link rel=\"icon\"");
 
     private static String parse(String s, Pattern pattern) {
         final String r;
@@ -32,10 +32,12 @@ public class ArticleParser extends Parser<Article> {
         final String title = parse(s, titlePattern);
         final String id = parse(s, idPattern);
         final String author = parse(s, authorPattern);
+        final String headerImage = parse(s, headerImagePattern);
+        final String category = parse(s, categoryPattern);
         String content = ""; //TODO
         final String views = parse(s, viewsPattern);
         return new Article.ArticleBuilder().setId(id).setTitle(title).setAuthor(author).setContent(content).setDateTime(date)
-                .setDescription(description).setViews(views).build();
+                .setHeaderImageUrl(headerImage).setDescription(description).setCategoryTitle(category).setViews(views).build();
     }
 
 }
