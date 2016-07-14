@@ -12,7 +12,7 @@ public class ArticleParser extends Parser<Article> {
     private static Pattern viewsPattern = Pattern.compile("<img border=0 src=\"\\/images\\/eye_views.png\" style=\"margin-left:8px;margin-bottom:4px;margin-right:1px;\">(.*?)<!--old ");
     private static Pattern dateTimePattern = Pattern.compile("<time  itemprop=\"dateCreated\" class=\"entry-date updated\" datetime=\"(.*?)\" >");
     private static Pattern categoryPattern = Pattern.compile("category.*>([А-Я]*)<\\/a");
-    private static Pattern headerImagePattern = Pattern.compile("<meta property=\"og:image\" content=\"http://drugoigorod.ru/wp-content/uploads/\\d{4}/\\d{2}/(.*)\\S/><link rel=\"icon\"");
+    private static Pattern headerImagePattern = Pattern.compile("<meta property=\"og:image\" content=\"(.*?)\" />");
 
     private static String parse(String s, Pattern pattern) {
         final String r;

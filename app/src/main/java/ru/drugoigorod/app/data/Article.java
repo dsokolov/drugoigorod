@@ -11,6 +11,7 @@ public class Article {
     private String categoryTitle;
     private String headerBackgroundColor;
     private String dateTime;
+    private String headerImageUrl;
 
     public Article(ArticleBuilder articleBuilder) {
         this.headerBackgroundColor = articleBuilder.headerBackgroundColor;
@@ -22,6 +23,7 @@ public class Article {
         this.dateTime = articleBuilder.dateTime;
         this.description = articleBuilder.description;
         this.author = articleBuilder.author;
+        this.headerImageUrl = articleBuilder.headerImageUrl;
     }
 
     public String getId() {
@@ -56,9 +58,8 @@ public class Article {
         return categoryTitle;
     }
 
-
     public String getHeaderImageUrl() {
-        return "header url";
+        return headerImageUrl;
     }
 
     public String getHeaderBackgroundColor() {
@@ -76,6 +77,7 @@ public class Article {
         private String author;
         private String headerBackgroundColor;
         private String categoryTitle;
+        public String headerImageUrl;
 
 
         public ArticleBuilder setId(String id) {
@@ -124,6 +126,7 @@ public class Article {
         }
 
         public ArticleBuilder setHeaderImageUrl(String s) {
+            this.headerImageUrl = s;
             return this;
         }
 
