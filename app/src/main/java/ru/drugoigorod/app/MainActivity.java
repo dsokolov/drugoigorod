@@ -1,23 +1,46 @@
 package ru.drugoigorod.app;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import ru.drugoigorod.app.web.Request;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button = (Button) findViewById(R.id.goto_article);
+        button.setOnClickListener(this);
+        button.setText("goto article");
+
         setToolbar();
+
+     /*   if (savedInstanceState == null) {
+
+            fragmentManager = getFragmentManager();
+            fragmentTransaction = fragmentManager
+                    .beginTransaction();
+            NDrawerFragment myFragment = new NDrawerFragment();
+
+            fragmentTransaction.add(R.id.drawer_container, myFragment);
+            fragmentTransaction.commit();
+        }*/
 
         new AsyncTask<Void, Void, Void>() {
 
@@ -39,11 +62,35 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
-            CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
-            collapsingToolbarLayout.setTitle("Test Collapse");
-            collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.colorAccent));
-            collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorAccent));
         }
+    }
+
+
+    private void setNavigationDrawer() {
+
+
+
+
+
+
+
+   /*     Fragment drawerFragment =  getSupportFragmentManager().findFragmentById(R.id.drawer_container);
+        if (drawerFragment == null) {
+            drawerFragment = new NDrawerFragment();
+            getSupportFragmentManager().
+                    beginTransaction().add(R.id.drawer_container, drawerFragment)
+                    .commit();
+        }*/
+
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this, Article.class);
+        intent.putExtra("id", "test id");
+        intent.putExtra("url", "some url");
+        startActivity(intent);
     }
 }
 

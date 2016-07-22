@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"/>
+
+    <item
+        android:id="@+id/nav_camera"
+        android:title="@string/item_main" />
+    <item
+        android:id="@+id/nav_gallery"
+        android:title="Test 1" />
+    <item
+        android:id="@+id/nav_slideshow"
+        android:title="Test 2" />
+    <item
+        android:id="@+id/nav_manage"
+        android:title="Test 3" />
+
+
+</menu>
