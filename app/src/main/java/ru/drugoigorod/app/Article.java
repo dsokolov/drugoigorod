@@ -23,9 +23,9 @@ public class Article extends AppCompatActivity {
         String url = getIntent().getStringExtra("url");
         setToolbar(id, url);
 
-      //  webView = (WebView) findViewById(R.id.webViewContent);
+        //  webView = (WebView) findViewById(R.id.webViewContent);
 
-      //  webView.loadUrl("file:///android_asset/articles/bloodwork.html");
+        //  webView.loadUrl("file:///android_asset/articles/bloodwork.html");
 
 
     }
@@ -53,9 +53,9 @@ public class Article extends AppCompatActivity {
             if (!idOrUrl) {
                 collapsingToolbarLayout.setTitle(url);
             }
-            collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.colorAccent));
-            collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorAccent));
-            collapsingToolbarLayout.setContentScrimColor(getResources().getColor(R.color.colorPrimaryDark));
+            collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.accent));
+            collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.accent));
+            collapsingToolbarLayout.setContentScrimColor(getResources().getColor(R.color.primary_dark));
         }
     }
 }

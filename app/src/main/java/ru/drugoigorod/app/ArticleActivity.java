@@ -14,7 +14,7 @@ import android.widget.Button;
 
 import ru.drugoigorod.app.web.Request;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class ArticleActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_article);
 
         Button button = (Button) findViewById(R.id.goto_article);
         button.setOnClickListener(this);
