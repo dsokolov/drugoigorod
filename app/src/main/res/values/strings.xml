@@ -8,5 +8,6 @@
     <string name="menu_main_tangibles">Ценности</string>
     <string name="menu_main_projects">Спецпроекты</string>
     <string name="menu_main_video">Видео</string>
+    <string name="empty" />
 
 </resources>

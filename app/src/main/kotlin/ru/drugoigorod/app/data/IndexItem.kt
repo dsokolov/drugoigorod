@@ -4,9 +4,12 @@ data class IndexItem(
         val articleId: String,
         val title: String,
         val backgroundUrl: String,
-        val style: Style
-)
-
-enum class Style {
-    BIG, MIDDLE, NORMAL, NOPIC
+        val style: Style,
+        val textColor: Int,
+        val textBackgroundColor: Int
+) {
+    enum class Style {
+        BIG, MIDDLE, NORMAL, NOPIC
+    }
 }
+
