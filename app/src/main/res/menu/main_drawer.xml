@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_main_main"
+        android:checkable="true"
+        android:checked="true"
+        android:title="@string/menu_main_main" />
+
+    <item
+        android:id="@+id/menu_main_news"
+        android:checkable="true"
+        android:title="@string/menu_main_news" />
+
+    <item
+        android:id="@+id/menu_main_histories"
+        android:checkable="true"
+        android:title="@string/menu_main_histories" />
+
+    <item
+        android:id="@+id/menu_main_projects"
+        android:checkable="true"
+        android:title="@string/menu_main_projects" />
+
+    <item
+        android:id="@+id/menu_main_video"
+        android:checkable="true"
+        android:title="@string/menu_main_video" />
+
+</menu>

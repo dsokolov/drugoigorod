@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">DrugoiGorod</string>
+    <string name="app_name">Другой город</string>
     <string name="item_main">Главная</string>
-    <string name="open_drawer">Open navigation drawer</string>
-    <string name="close_drawer">Close navigation drawer</string>
+
+    <string name="menu_main_main">Главная</string>
+    <string name="menu_main_news">Новости</string>
+    <string name="menu_main_histories">Истории</string>
+    <string name="menu_main_tangibles">Ценности</string>
+    <string name="menu_main_projects">Спецпроекты</string>
+    <string name="menu_main_video">Видео</string>
+    <string name="empty" />
+
 </resources>

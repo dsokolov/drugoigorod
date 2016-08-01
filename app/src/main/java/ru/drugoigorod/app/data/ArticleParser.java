@@ -1,5 +1,7 @@
 package ru.drugoigorod.app.data;
 
+import android.support.annotation.NonNull;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,19 +16,9 @@ public class ArticleParser extends Parser<Article> {
     private static Pattern categoryPattern = Pattern.compile("category.*>([А-Я]*)<\\/a");
     private static Pattern headerImagePattern = Pattern.compile("<meta property=\"og:image\" content=\"(.*?)\" />");
 
-    private static String parse(String s, Pattern pattern) {
-        final String r;
-        Matcher matcher = pattern.matcher(s);
-        if (matcher.find()) {
-            r = matcher.group(1);
-        } else {
-            r = "";
-        }
-        return r;
-    }
-
+    @NonNull
     @Override
-    protected Article onParse(String s) {
+    protected Article onParse(@NonNull String s) {
         final String date = parse(s, dateTimePattern);
         final String description = parse(s, descriptionPattern);
         final String title = parse(s, titlePattern);

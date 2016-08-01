@@ -1,6 +1,7 @@
 package ru.drugoigorod.app.web;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +11,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Request {
+
+    private static final String TAG = "Request";
 
     private final String url;
 
@@ -23,6 +26,7 @@ public class Request {
     public String request() throws RequestException {
         String result = null;
         try {
+            Log.v(TAG, "request " + url);
             URL url1 = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) url1.openConnection();
             connection.setConnectTimeout(3000);
@@ -30,6 +34,7 @@ public class Request {
             connection.setInstanceFollowRedirects(true);
             connection.connect();
             int code = connection.getResponseCode();
+            Log.v(TAG, "response " + code);
             if (code == 200) {
                 BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 StringBuilder stringBuilder = new StringBuilder();

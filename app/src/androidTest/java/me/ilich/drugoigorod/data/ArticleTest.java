@@ -24,7 +24,7 @@ public class ArticleTest {
                 .setViews("123")
                 .setDateTime("publish date time")
                 .setCategoryTitle("category")
-                .setHeaderImageUrl("header url")
+                .setHeaderImageUrl("header url 1")
                 .setHeaderBackgroundColor("color")
                 .setContent("content")
                 .build();
@@ -35,7 +35,7 @@ public class ArticleTest {
         assertEquals("123", article.getViewsCount());
         assertEquals("publish date time", article.getPublishDateTime());
         assertEquals("category", article.getCategoryTitle());
-        assertEquals("header url", article.getHeaderImageUrl());
+        assertEquals("header url 1", article.getHeaderImageUrl());
         assertEquals("color", article.getHeaderBackgroundColor());
         assertEquals("content", article.getContent());
     }
