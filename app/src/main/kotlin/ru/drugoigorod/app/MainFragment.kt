@@ -1,5 +1,6 @@
 package ru.drugoigorod.app
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -77,6 +78,7 @@ class MainFragment : Fragment() {
             holder.titleTextView.text = "${item.title}"
             holder.titleTextView.setTextColor(item.textColor)
             holder.titleTextView.setBackgroundColor(item.textBackgroundColor)
+            holder.itemView.setOnClickListener { startActivity(Intent(activity, ArticleActivity::class.java)) }
         }
 
         override fun getItemCount(): Int = data.size

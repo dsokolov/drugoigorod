@@ -25,7 +25,8 @@ import java.util.List;
 import ru.drugoigorod.app.fragment.NDrawerFragment;
 import ru.drugoigorod.app.web.Request;
 
-class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+public class ArticleActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+
     private NDrawerFragment myFragment;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -36,7 +37,7 @@ class MainActivity extends AppCompatActivity implements  NavigationView.OnNaviga
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_article);
 
 
         setToolbar();

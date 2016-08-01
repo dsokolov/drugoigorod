@@ -37,7 +37,7 @@ class IndexItemParserTestCase {
                         "ТЕМА ЛЕТА",
                         "http://drugoigorod.ru/wp-content/uploads/2016/07/концерт-11.jpg",
                         Style.BIG,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 ),
                 IndexItem(
@@ -45,7 +45,7 @@ class IndexItemParserTestCase {
                         "ШЕФ, ТРОГАЙ!",
                         "http://drugoigorod.ru/wp-content/uploads/2016/07/tumblr_njbu28if9v1qd479ro1_1280.gif",
                         Style.NORMAL,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 ),
                 IndexItem(
@@ -53,7 +53,7 @@ class IndexItemParserTestCase {
                         "ЧТО ДУШЕ УГОДНО",
                         "http://drugoigorod.ru/wp-content/uploads/2016/07/pA09wik0ke8.jpg",
                         Style.NORMAL,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 ),
                 IndexItem(
@@ -61,7 +61,7 @@ class IndexItemParserTestCase {
                         "ВОЗВРАЩЕНИЕ ЦВЕТА",
                         "http://drugoigorod.ru/wp-content/uploads/2016/06/xgDzirkb35A-728x483.jpg",
                         Style.NORMAL,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 ),
                 IndexItem(
@@ -69,7 +69,7 @@ class IndexItemParserTestCase {
                         "ВСЁ МОГУТ КОРОЛИ",
                         "http://drugoigorod.ru/wp-content/uploads/2016/07/luxury_lifestyle-wallpaper-1152x720-773x483.jpg",
                         Style.NORMAL,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 ),
                 IndexItem(
@@ -77,7 +77,7 @@ class IndexItemParserTestCase {
                         "МАМА АНАРХИЯ",
                         "http://drugoigorod.ru/wp-content/uploads/2016/07/ivan2.jpg",
                         Style.NORMAL,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 ),
                 IndexItem(
@@ -85,7 +85,7 @@ class IndexItemParserTestCase {
                         "ВХОД СВОБОДНЫЙ",
                         "http://drugoigorod.ru/wp-content/uploads/2016/07/gimage_842_новый-размер1-675x483.jpg",
                         Style.NORMAL,
-                        Color.parseColor("#fff"),
+                        Color.parseColor("#FFFFFF"),
                         Color.parseColor("#808080")
                 )
         )
