@@ -25,7 +25,7 @@ import java.util.List;
 import ru.drugoigorod.app.fragment.NDrawerFragment;
 import ru.drugoigorod.app.web.Request;
 
-public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private NDrawerFragment myFragment;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
